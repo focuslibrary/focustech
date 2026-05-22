@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Focus Library | Reading Room – Alpha 1, Greater Noida</title>
+  <!-- SEO Meta Tags -->
+  <meta name="description" content="Focus Library — a minimalist reading room & quiet workspace. Coming soon to Alpha 1, Greater Noida. Get early updates on WhatsApp.">
+  <meta name="keywords" content="Focus Library, reading room Greater Noida, quiet study space, Alpha 1 library, co-working reading room, coming soon">
+  <meta name="author" content="Focus Library">
+  <meta name="robots" content="index, follow">
+  <meta name="geo.placename" content="Greater Noida, Alpha 1, Uttar Pradesh, India">
+  <link rel="canonical" href="https://focuslibrary.in/">
+  <!-- Open Graph / Social -->
+  <meta property="og:title" content="Focus Library | Quiet reading room — Alpha 1, Greater Noida">
+  <meta property="og:description" content="Your dedicated space for deep focus, books & silence. Coming soon to Greater Noida. Connect via WhatsApp.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://focuslibrary.in/">
+  <meta property="og:image" content="https://focuslibrary.in/og-image.jpg">
+  <meta name="twitter:card" content="summary">
+  <!-- Bootstrap 5 + Icons + Google Fonts -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
+  <!-- Schema.org markup (Local Business - minimal SEO) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Library",
+    "name": "Focus Library",
+    "description": "Minimalist reading room and quiet workspace coming soon to Greater Noida, Alpha 1.",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Greater Noida",
+      "addressRegion": "UP",
+      "addressCountry": "IN",
+      "streetAddress": "Alpha 1, Pari Chowk"
+    },
+    "openingHours": "Coming Soon",
+    "telephone": "+919654300049",
+    "url": "https://focuslibrary.in/",
+    "sameAs": []
+  }
+  </script>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', sans-serif;
+      background: #fefcf8;
+      color: #1e1e2a;
+      overflow-x: hidden;
+      letter-spacing: -0.01em;
+    }
+
+    /* SOFT MODERN BACKGROUND — subtle radial gradient */
+    .bg-soft {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -2;
+      background: radial-gradient(circle at 10% 20%, rgba(245, 240, 230, 0.6) 0%, #fefaf5 90%);
+    }
+
+    /* animated abstract blur shapes (interactive modern mood) */
+    .blob {
+      position: fixed;
+      width: 55vw;
+      height: 55vw;
+      background: rgba(225, 212, 190, 0.3);
+      filter: blur(90px);
+      border-radius: 60% 40% 70% 30% / 40% 50% 50% 60%;
+      z-index: -1;
+      animation: drift 28s infinite alternate ease-in-out;
+    }
+
+    .blob-1 {
+      top: -15vh;
+      left: -15vw;
+      background: #e7dbca;
+    }
+
+    .blob-2 {
+      bottom: -10vh;
+      right: -10vw;
+      width: 60vw;
+      height: 60vw;
+      background: #d9cdb6;
+      animation-duration: 35s;
+      animation-direction: alternate-reverse;
+    }
+
+    @keyframes drift {
+      0% {
+        transform: translate(0, 0) rotate(0deg);
+      }
+      100% {
+        transform: translate(6%, 8%) rotate(8deg);
+      }
+    }
+
+    /* main container smooth fade-up */
+    .hero-content {
+      animation: fadeUp 1s cubic-bezier(0.2, 0.9, 0.4, 1.1) forwards;
+      opacity: 0;
+      transform: translateY(18px);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    @keyframes fadeUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* subtle lift on hover for the whole hero section */
+    .hero-content:hover {
+      transform: translateY(-4px);
+    }
+
+    /* brand minimal typography (gradient text) — with interactive hover */
+    .brand-name {
+      font-weight: 700;
+      font-size: clamp(3.2rem, 12vw, 5.5rem);
+      letter-spacing: -0.02em;
+      background: linear-gradient(135deg, #2d2a24 0%, #4b443a 100%);
+      background-clip: text;
+      -webkit-background-clip: text;
+      color: transparent;
+      text-shadow: none;
+      cursor: default;
+      transition: letter-spacing 0.45s cubic-bezier(0.25, 0.8, 0.25, 1.2),
+        filter 0.5s ease,
+        transform 0.4s cubic-bezier(0.25, 0.8, 0.25, 1.2);
+      position: relative;
+      display: inline-block;
+      user-select: none;
+    }
+
+    /* interactive hover: gentle spread + warm glow */
+    .brand-name:hover {
+      letter-spacing: 0.04em;
+      filter: drop-shadow(0 0 18px rgba(180, 150, 110, 0.55));
+      transform: scale(1.03);
+    }
+
+    /* subtle decorative line that fades in under "Focus" on hover */
+    .brand-name::after {
+      content: '';
+      position: absolute;
+      left: 10%;
+      bottom: 4px;
+      width: 0%;
+      height: 2.5px;
+      background: linear-gradient(90deg, transparent, #b89a7a, #d4b896, #b89a7a, transparent);
+      border-radius: 4px;
+      transition: width 0.55s cubic-bezier(0.25, 0.8, 0.25, 1.2);
+      opacity: 0;
+    }
+
+    .brand-name:hover::after {
+      width: 80%;
+      opacity: 0.85;
+    }
+
+    /* subtle brand underline / tagline — removed from DOM, keeping style for reference */
+    .brand-tagline {
+      font-weight: 400;
+      letter-spacing: 0.08em;
+      font-size: 0.9rem;
+      color: #7e6b57;
+      text-transform: uppercase;
+      border-bottom: 1px dashed #ddd0c0;
+      display: inline-block;
+      padding-bottom: 0.2rem;
+    }
+
+    .location-chip {
+      background: rgba(235, 225, 212, 0.7);
+      backdrop-filter: blur(2px);
+      font-weight: 500;
+      font-size: 0.9rem;
+      border-radius: 100px;
+      transition: all 0.2s ease;
+    }
+
+    /* feature icons */
+    .feature-icon {
+      font-size: 1.6rem;
+      color: #8b765c;
+      transition: transform 0.2s ease;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    /* SVG chair inside feature-icon inherits sizing via em */
+    .feature-icon svg {
+      width: 1em;
+      height: 1em;
+      display: block;
+    }
+
+    .feature-item:hover .feature-icon {
+      transform: translateY(-3px);
+    }
+
+    .feature-item {
+      transition: all 0.2s;
+    }
+
+    /* WhatsApp button */
+    .btn-wa {
+      background: #25D366;
+      border: none;
+      font-weight: 600;
+      letter-spacing: -0.2px;
+      transition: all 0.25s cubic-bezier(0.2, 0.9, 0.4, 1.1);
+      box-shadow: 0 12px 22px -12px rgba(37, 211, 102, 0.28);
+    }
+
+    .btn-wa:hover {
+      background: #20b85a;
+      transform: scale(1.02) translateY(-2px);
+      box-shadow: 0 18px 28px -12px rgba(37, 211, 102, 0.4);
+    }
+
+    .btn-wa:active {
+      transform: scale(0.98);
+    }
+
+    .footer-note {
+      font-size: 0.75rem;
+      color: #a5917a;
+      border-top: 1px solid rgba(0, 0, 0, 0.05);
+    }
+
+    /* responsive fine-tuning */
+    @media (max-width: 576px) {
+      .btn-wa {
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+        font-size: 1rem;
+      }
+      .feature-icon {
+        font-size: 1.3rem;
+      }
+      .feature-text {
+        font-size: 0.8rem;
+      }
+      .brand-tagline {
+        font-size: 0.75rem;
+      }
+      .brand-name:hover {
+        letter-spacing: 0.02em;
+        transform: scale(1.02);
+      }
+    }
+
+    a,
+    .btn {
+      -webkit-tap-highlight-color: transparent;
+    }
+  </style>
+</head>
+<body>
+  <!-- Ambient background elements -->
+  <div class="bg-soft"></div>
+  <div class="blob blob-1"></div>
+  <div class="blob blob-2"></div>
+
+  <!-- main content - full viewport flex centering -->
+  <div class="container d-flex flex-column min-vh-100 justify-content-center align-items-center py-5 px-3">
+    <div class="hero-content text-center w-100" style="max-width: 760px;">
+
+      <!-- brand zone: tagline removed — "Focus" heading shifted up naturally -->
+      <h1 class="brand-name mb-2" title="Hover to feel the focus">Focus</h1>
+      <p class="fs-4 fw-light text-dark-emphasis mb-1" style="color: #322c24;">Library & Reading Room</p>
+
+      <!-- location badge: coming soon + alpha1 -->
+      <div class="d-flex justify-content-center mt-3 mb-3">
+        <div class="location-chip px-4 py-2 d-inline-flex align-items-center gap-2 shadow-sm">
+          <i class="fas fa-map-pin text-secondary" style="font-size: 0.8rem;"></i>
+          <span class="small fw-semibold">📍 Coming Soon — Greater Noida, Alpha 1</span>
+        </div>
+      </div>
+
+      <!-- short description: updated for premium, distraction-free positioning -->
+      <p class="text-muted mt-3 mb-3 px-md-4 lead" style="font-weight: 400; line-height: 1.5;">
+        A premium space for <strong>deep reading, focused preparation</strong> &amp; distraction-free study.
+        Designed for clarity and calm. Opening soon in Alpha&nbsp;1 — be the first to experience it.
+      </p>
+
+      <!-- minimal features row (clean & calm) — chair icon replaced with custom SVG -->
+      <div class="d-flex flex-wrap justify-content-center gap-4 gap-md-5 mt-4 mb-5">
+        <div class="feature-item text-center" style="min-width: 85px;">
+          <div class="feature-icon mb-1"><i class="fas fa-book-open"></i></div>
+          <div class="feature-text small text-secondary fw-medium">Premium Library</div>
+        </div>
+        <div class="feature-item text-center" style="min-width: 85px;">
+          <div class="feature-icon mb-1"><i class="fas fa-volume-off"></i></div>
+          <div class="feature-text small text-secondary fw-medium">Absolute Silence</div>
+        </div>
+        <div class="feature-item text-center" style="min-width: 85px;">
+          <div class="feature-icon mb-1"><i class="fas fa-wifi"></i></div>
+          <div class="feature-text small text-secondary fw-medium">High-Speed WiFi</div>
+        </div>
+        <div class="feature-item text-center" style="min-width: 85px;">
+          <div class="feature-icon mb-1">
+            <!-- Custom office chair SVG — clean, modern vector -->
+            <svg viewBox="0 0 28 28" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg" aria-label="Ergonomic office chair">
+              <!-- Backrest — gently curved upper portion -->
+              <path d="M7.5 4.5 C7.5 2.8 8.7 2 10.5 2 L17.5 2 C19.3 2 20.5 2.8 20.5 4.5 L20.5 11 C20.5 12.7 19.3 13.5 17.5 13.5 L10.5 13.5 C8.7 13.5 7.5 12.7 7.5 11 Z" />
+              <!-- Seat cushion -->
+              <rect x="5" y="13" width="18" height="4.5" rx="2" />
+              <!-- Armrests -->
+              <path d="M6.5 8 L6.5 15.5" />
+              <path d="M21.5 8 L21.5 15.5" />
+              <!-- Gas lift cylinder -->
+              <line x1="14" y1="17.5" x2="14" y2="22.5" />
+              <!-- Base hub -->
+              <circle cx="14" cy="23" r="2.2" />
+              <!-- 5-point base legs -->
+              <line x1="14" y1="23" x2="3.5" y2="26.5" />
+              <line x1="14" y1="23" x2="9" y2="27" />
+              <line x1="14" y1="23" x2="19" y2="27" />
+              <line x1="14" y1="23" x2="24.5" y2="26.5" />
+              <line x1="14" y1="23" x2="14" y2="27.5" />
+              <!-- Casters (small dots at leg ends) -->
+              <circle cx="3.5" cy="26.5" r="1" />
+              <circle cx="9" cy="27" r="1" />
+              <circle cx="19" cy="27" r="1" />
+              <circle cx="24.5" cy="26.5" r="1" />
+              <circle cx="14" cy="27.5" r="1" />
+            </svg>
+          </div>
+          <div class="feature-text small text-secondary fw-medium">Ergonomic Seating</div>
+        </div>
+      </div>
+
+      <!-- primary CTA : WhatsApp connection -->
+      <a href="https://wa.me/919654300049?text=hello%20i%20need%20more%20information%20about%20Focus%20Library"
+        class="btn btn-wa btn-lg rounded-pill px-5 py-3 text-white d-inline-flex align-items-center gap-3 shadow-sm"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Connect on WhatsApp for updates">
+        <i class="fab fa-whatsapp fs-4"></i>
+        <span class="fw-semibold">Connect on WhatsApp</span>
+        <i class="fas fa-arrow-right" style="font-size: 0.9rem; opacity: 0.8;"></i>
+      </a>
+
+      <!-- extra tiny info : early access note + updated address -->
+      <div class="mt-5 d-flex flex-column align-items-center gap-1">
+        <div class="d-flex align-items-center gap-2 text-secondary-emphasis small bg-light bg-opacity-50 rounded-pill px-3 py-1">
+          <i class="fas fa-clock fa-fw"></i>
+          <span>✨ Limited early-access invites — enquire now</span>
+        </div>
+        <div class="mt-2 text-muted small">
+          📍 Alpha 1, Pari Chowk
+        </div>
+      </div>
+    </div>
+
+    <!-- minimal footer -->
+    <div class="footer-note mt-5 pt-3 text-center w-100">
+      <span class="small">© 2025 Focus Library — where stillness meets intention. | 📖 coming soon to Greater Noida</span>
+    </div>
+  </div>
+
+  <!-- dynamic year update + interactive CTA (no logs) -->
+  <script>
+    (function () {
+      const footerSpan = document.querySelector('.footer-note span');
+      if (footerSpan && footerSpan.innerText.includes('2025')) {
+        const currentYear = new Date().getFullYear();
+        if (currentYear !== 2025) {
+          footerSpan.innerText = footerSpan.innerText.replace('2025', currentYear);
+        }
+      }
+      // clean click listener for WhatsApp button (no intrusive logs)
+      const waBtn = document.querySelector('.btn-wa');
+      if (waBtn) {
+        waBtn.addEventListener('click', (e) => {
+          // WhatsApp opens natively — nothing additional needed
+        });
+      }
+    })();
+  </script>
+  <!-- Bootstrap JS (optional) -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
